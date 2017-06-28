@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-4 col-md-4">
+            <div style="background: whitesmoke; padding: 15px;">
+                <p class="text-center text-primary background-primary">Fill form to Login</p>
+                <form ng-controller="loginCtrl" name="myForm" novalidate>
+                    <p>Username
+                        <br>
+                        <input type="text" name="user" ng-model="user" required class="form-control">
+                    </p>
+                    <p>Email
+                        <br>
+                        <input type="password" name="password" ng-model="password" required class="form-control">
+                    </p>
+                    <p>
+                        <input type="submit" ng-submit="login" class="btn btn-danger" ng-disabled="check">
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

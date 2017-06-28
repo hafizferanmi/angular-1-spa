@@ -1,0 +1,27 @@
+<style type="text/css">
+.usernames {
+    background: yellow;
+    padding: 5px;
+    border: 1px dotted white;
+}
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 col-md-offset-2">
+            <div ng-controller='userCtrl'>
+                <div>Poeple you may follow</div>
+                <div class="usernames" ng-repeat="user in users">
+                    <div class="btn btn-success"> {{ user.username }} </div>
+                    <span class="pull-right btn btn-danger" ng-click="follow(user.username)"> follow </span>
+                    <br>
+                </div>
+                <div>People you already followed</div>
+                <div class="usernames" ng-repeat="follow in following">
+                    <div class="btn btn-success"> {{ follow.following }} </div>
+                    <span class="pull-right btn btn-danger" ng-click="unfollow(follow.following)"> unfollow </span>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

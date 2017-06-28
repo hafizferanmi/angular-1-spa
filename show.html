@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 col-md-offset-3">
+            <div ng-controller='show-post'>
+                <button type="button" class="btn btn-danger" ng-click='show_post()'> Show </button>
+                <ul>
+                    <div class="panel panel-danger" ng-repeat="x in posts">
+                        <div class="panel-header"> {{ x.username }} </div>
+                        <div class="panel-body"> {{ x.title}} </div>
+                        <div class="panel-body"> {{ x.content}} </div>
+                        <div>
+                            <a href="{{window.location.pathname}}/#{{x.title}}"> Show post </a>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-4 col-md-4">
+            <div style="background: whitesmoke; padding: 15px;">
+                <p class="text-center text-primary background-primary">Fill form properly to register</p>
+                <form ng-controller="joinCtrl" name="regForm" novalidate>
+                    <p>Full name
+                        <br>
+                        <input type="text" name="user" ng-model="user" required class="form-control">
+                        <span style="color:red" ng-show="regForm.user.$dirty && regForm.user.$invalid">
+                                <span ng-show="regForm.user.$error.required">Full name is required.</span>
+                        </span>
+                    </p>
+                    <p>Email
+                        <br>
+                        <input type="email" name="email" ng-model="email" required class="form-control">
+                        <span style="color:red" ng-show="regForm.email.$dirty && regForm.email.$invalid">
+                                <span ng-show="regForm.email.$error.required">Email is required.</span>
+                        <span ng-show="regForm.email.$error.email">Invalid email address.</span>
+                        </span>
+                    </p>
+                    <p>Username
+                        <br>
+                        <input type="text" name="username" ng-model="username" required class="form-control">
+                        <span style="color:red" ng-show="regForm.username.$dirty && regForm.usernme.$invalid">
+                                <span ng-show="regForm.username.$error.required">Username is required.</span>
+                        </span>
+                    </p>
+                    <p>Phone number
+                        <br>
+                        <input type="number" name="phone" ng-model="phone" requlocationired class="form-control">
+                        <span style="color:red" ng-show="regForm.phone.$dirty && regForm.phone.$invalid">
+                                <span ng-show="regForm.phone.$error.required">Phone number is required.</span>
+                    </p>
+                    <p>Location
+                        <br>
+                        <input type="text" name="location" ng-model="location" required class="form-control">
+                        <span style="color:red" ng-show="regForm.location.$dirty && regForm.location.$invalid">
+                                <span ng-show="regForm.location.$error.required">Location is required.</span>
+                        </span>
+                    </p>
+                    <p>
+                        <input type="submit" ng-click="join()" class="btn btn-danger">
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HOzii..</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <script src="angular.js"></script>
+    <script src="angular-route.js"></script>
+    <script src="app.js"></script>
+</head>
+<style type="text/css">
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+
+.green {
+    color: green;
+}
+</style>
+
+<body>
+    <header style="background: blue; color: black">
+        <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-light bg-faded">
+                    <a class="navbar-brand" href="#">{4:Navbar}</a>
+                    <ul class="nav navbar-nav pull-right">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#/">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#join">JOIN</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#show">show</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#blue">blue</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#profile">profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#login">Login</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section id="body" ng-app="myApp">
+        <ng-view></ng-view>
+    </section>
+</body>
+
+</html>
